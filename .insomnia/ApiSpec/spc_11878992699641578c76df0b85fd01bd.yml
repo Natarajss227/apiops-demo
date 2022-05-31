@@ -1,7 +1,7 @@
 _id: spc_11878992699641578c76df0b85fd01bd
 type: ApiSpec
 parentId: wrk_8840164f6fb344039a203628a14fa85f
-modified: 1654007026013
+modified: 1654007468767
 created: 1654006395042
 fileName: apiops-demo
 contents: >-
@@ -85,7 +85,6 @@ contents: >-
               type: string
               format: date
               example: "2021-09-28"
-            in: query
             name: date
             description: Show sessions on the provided date
         responses:

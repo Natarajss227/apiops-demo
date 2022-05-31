@@ -1,0 +1,14 @@
+name: Run inso
+on: push
+jobs:
+  run-inso:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup Inso
+        uses: kong/setup-inso@v1
+        with:
+          inso-version: 2.4.0
+      - name: Run inso
+        run: inso lint spec apiops-demo

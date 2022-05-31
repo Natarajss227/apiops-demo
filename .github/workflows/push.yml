@@ -10,5 +10,14 @@ jobs:
         uses: kong/setup-inso@v1
         with:
           inso-version: 2.4.0
-      - name: Run inso
+      - name: Setup decK
+        uses: kong/setup-deck@v1
+        with:
+          deck-version: 1.12.1
+      - name: Run inso linting
         run: inso lint spec apiops-demo
+      - name: Run inso generate
+        run: inso generate config apiops-demo > kong.yaml
+      - name: Run deck sync
+        run: deck sync --select-tag OAS3_import --kong-addr "http://ec2-35-178-19-102.eu-west-2.compute.amazonaws.com:8001/"
+      

@@ -1,0 +1,16 @@
+_id: env_env_9bb811203106d2ef5840b63e4ad47550b02329d9_sub
+type: Environment
+parentId: env_9bb811203106d2ef5840b63e4ad47550b02329d9
+modified: 1654008337393
+created: 1654008337393
+name: OpenAPI env
+data:
+  scheme: https
+  base_path: ""
+  host: summit-demo.com
+  httpUsername: username
+  httpPassword: password
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1654008337393

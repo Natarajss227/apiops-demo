@@ -1,0 +1,13 @@
+_id: ut_caee414e92c44eb291a8cb81745fccc1
+type: UnitTest
+parentId: uts_d37cc8fa05f14d3bb7bde968aa7af08d
+modified: 1654010250769
+created: 1654010162198
+requestId: req_wrk_8840164f6fb344039a203628a14fa85f49057e04
+name: Returns 200
+code: |-
+  const response = await insomnia.send();
+  const body = JSON.parse(response.data);
+  expect(body[0].name).to.equal("Gateway");
+  expect(body[1].name).to.equal("Insomnia");
+  expect(body[2].name).to.equal("Developer Portal");

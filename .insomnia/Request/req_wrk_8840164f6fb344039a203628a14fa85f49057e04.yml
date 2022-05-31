@@ -1,0 +1,27 @@
+_id: req_wrk_8840164f6fb344039a203628a14fa85f49057e04
+type: Request
+parentId: fld_wrk_8840164f6fb344039a203628a14fa85f38a00715
+modified: 1654008337370
+created: 1654008337370
+url: "{{ base_url }}/products"
+name: List Kong products
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: type
+    disabled: true
+    value: string
+headers: []
+authentication:
+  type: basic
+  username: "{{ httpUsername }}"
+  password: "{{ httpPassword }}"
+metaSortKey: -1654008337370
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

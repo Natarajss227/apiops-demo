@@ -1,7 +1,7 @@
 _id: spc_11878992699641578c76df0b85fd01bd
 type: ApiSpec
 parentId: wrk_8840164f6fb344039a203628a14fa85f
-modified: 1654008341279
+modified: 1654008545300
 created: 1654006395042
 fileName: apiops-demo
 contents: >-
@@ -23,6 +23,8 @@ contents: >-
   paths:
     /products:
       get:
+        security: 
+          - BasicAuth: []
         summary: List Kong products
         tags:
           - product
@@ -220,6 +222,12 @@ contents: >-
           - type
           - title
           - instance
+
+    securitySchemes:
+      BasicAuth:
+        type: http
+        scheme: basic
+
   tags:
     - name: product
       description: Product related endpoints

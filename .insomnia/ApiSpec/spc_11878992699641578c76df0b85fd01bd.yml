@@ -1,7 +1,7 @@
 _id: spc_11878992699641578c76df0b85fd01bd
 type: ApiSpec
 parentId: wrk_8840164f6fb344039a203628a14fa85f
-modified: 1654008545300
+modified: 1654008928683
 created: 1654006395042
 fileName: apiops-demo
 contents: >-
@@ -25,6 +25,11 @@ contents: >-
       get:
         security: 
           - BasicAuth: []
+        x-kong-plugin-rate-limiting:
+          enabled: true
+          config:
+            policy: local
+            minute: 2
         summary: List Kong products
         tags:
           - product
